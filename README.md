@@ -15,3 +15,4 @@ The system operates within the continuous loop() function, constantly checking t
 1.	"Clear" State (No Motion): When no movement is detected, the PIR sensor output is LOW. The ESP32 maintains the buzzer and all four LEDs in the OFF state. The OLED screen displays the status message: "System: CLEAR".
 2.	"Alarm" State (Motion Detected): If the PIR sensor detects movement, its output goes HIGH. The logic immediately triggers the alarm: the LEDs are set to HIGH (constantly ON) and the buzzer is activated with a continuous tone (1000 Hz). The OLED display is updated instantly to show the alert message: "Intruder!!!".
 3.	State Management: A simple tracking variable (is\_motion\_detected) ensures the display is only updated and the alarm messages are only printed to the Serial Monitor when the system transitions between the CLEAR and ALARM states, avoiding redundant updates.
+
